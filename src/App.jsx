@@ -1,20 +1,20 @@
 import React from 'react'
-import CompFirst from './components/CompFirst'
-import CompSecond from './components/CompSecond'
-import CompThird from './components/CompThird'
-import CompForth from './components/CompForth'
-import { useContext } from 'react'
-import { CounterContext } from './context/Context'
+import Items from './components/Items'
+import Cart from './components/Cart'
 const App = () => {
-  const counterValue = useContext(CounterContext);
-
   return (
     <div>
-      <h1>Count is {counterValue.count}</h1>
-      <CompFirst />
-      <CompSecond />
-      <CompThird />
-      <CompForth />
+      <div style={{ display: 'flex', flexWrap: 'wrap', gap: '10px' }}>
+        <Items name="Macbook" price="1000" />
+        <Items name="iPhone" price="1000" />
+        <Items name="iPad" price="1000" />
+        <Items name="iPod" price="1000" />
+        <Items name="iMac" price="1000" />
+        <Items name="iMac" price="1000" />
+      </div>
+      <div style={{ display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
+        <Cart />
+      </div>
     </div>
   )
 }
